@@ -1,0 +1,119 @@
+{
+    "id": "ch.utaku.group-ring",
+    "name": "Group Ring",
+    "description": "Ring several people, or a whole channel, to join a call. Works on Team Edition together with the Calls plugin.",
+    "homepage_url": "https://github.com/utaku/mattermost-plugin-group-ring",
+    "support_url": "https://github.com/utaku/mattermost-plugin-group-ring/issues",
+    "icon_path": "assets/icon.svg",
+    "version": "0.1.0",
+    "min_server_version": "12.0.0",
+    "server": {
+        "executables": {
+            "linux-amd64": "server/dist/plugin-linux-amd64",
+            "linux-arm64": "server/dist/plugin-linux-arm64",
+            "darwin-amd64": "server/dist/plugin-darwin-amd64",
+            "darwin-arm64": "server/dist/plugin-darwin-arm64",
+            "windows-amd64": "server/dist/plugin-windows-amd64.exe"
+        }
+    },
+    "webapp": {
+        "bundle_path": "webapp/dist/main.js"
+    },
+    "settings_schema": {
+        "header": "Group Ring rings people to join a call started with the Calls plugin (com.mattermost.calls). The Calls plugin must be installed and enabled.",
+        "footer": "",
+        "settings": [
+            {
+                "key": "Enabled",
+                "display_name": "Enable Group Ring:",
+                "type": "bool",
+                "help_text": "When false, the /ring command, the channel header button and the menu actions are disabled.",
+                "default": true
+            },
+            {
+                "key": "RingTimeoutSeconds",
+                "display_name": "Ring timeout (seconds):",
+                "type": "number",
+                "help_text": "How long an incoming ring keeps ringing before it stops automatically. Allowed range: 5 to 300.",
+                "default": 30
+            },
+            {
+                "key": "MaxRecipients",
+                "display_name": "Maximum recipients per ring:",
+                "type": "number",
+                "help_text": "Rings that would reach more people than this are rejected. Allowed range: 1 to 1000.",
+                "default": 50
+            },
+            {
+                "key": "ConfirmThreshold",
+                "display_name": "Ask for confirmation above:",
+                "type": "number",
+                "help_text": "When a ring would reach more people than this, the caller must confirm first. Set to 0 to never ask.",
+                "default": 10
+            },
+            {
+                "key": "RateLimitPerMinute",
+                "display_name": "Rings per caller per minute:",
+                "type": "number",
+                "help_text": "Maximum number of rings a single user can start within 60 seconds. Set to 0 to disable the rate limit.",
+                "default": 3
+            },
+            {
+                "key": "AllowPublicChannels",
+                "display_name": "Allow in public channels:",
+                "type": "bool",
+                "default": true
+            },
+            {
+                "key": "AllowPrivateChannels",
+                "display_name": "Allow in private channels:",
+                "type": "bool",
+                "default": true
+            },
+            {
+                "key": "AllowDirectMessages",
+                "display_name": "Allow in direct messages:",
+                "type": "bool",
+                "default": true
+            },
+            {
+                "key": "AllowGroupMessages",
+                "display_name": "Allow in group messages:",
+                "type": "bool",
+                "default": true
+            },
+            {
+                "key": "AllowedCallers",
+                "display_name": "Who can ring:",
+                "type": "dropdown",
+                "help_text": "Optional role restriction. Admins of a broader scope are always included (for example, system admins can ring when this is set to channel admins).",
+                "default": "everyone",
+                "options": [
+                    {"display_name": "Everyone who can post in the channel", "value": "everyone"},
+                    {"display_name": "Channel admins and above", "value": "channel_admins"},
+                    {"display_name": "Team admins and above", "value": "team_admins"},
+                    {"display_name": "System admins only", "value": "system_admins"}
+                ]
+            },
+            {
+                "key": "DNDBehavior",
+                "display_name": "Recipients in Do Not Disturb:",
+                "type": "dropdown",
+                "help_text": "How to ring people whose status is Do Not Disturb.",
+                "default": "silent",
+                "options": [
+                    {"display_name": "Show the incoming call without sound", "value": "silent"},
+                    {"display_name": "Send only a direct message", "value": "dm_only"},
+                    {"display_name": "Do not ring them", "value": "skip"}
+                ]
+            },
+            {
+                "key": "DeferToNativeRinging",
+                "display_name": "Defer to Calls native ringing in DMs and GMs:",
+                "type": "bool",
+                "help_text": "When true and ringing is enabled in the Calls plugin, a ring that starts a new call in a direct or group message only starts the call and lets the Calls plugin ring everyone. This avoids double ringing. Rings into a call that is already running are always handled by Group Ring.",
+                "default": true
+            }
+        ]
+    }
+}
