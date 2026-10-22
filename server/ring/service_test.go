@@ -12,10 +12,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	"github.com/utaku/mattermost-plugin-group-ring/server/calls"
-	"github.com/utaku/mattermost-plugin-group-ring/server/calls/mocks"
-	"github.com/utaku/mattermost-plugin-group-ring/server/kvstore"
-	"github.com/utaku/mattermost-plugin-group-ring/server/ring"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/calls"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/calls/mocks"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/kvstore"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/ring"
 )
 
 type env struct {

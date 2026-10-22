@@ -6,7 +6,7 @@ import (
 
 	"github.com/mattermost/mattermost/server/public/model"
 
-	"github.com/utaku/mattermost-plugin-group-ring/server/calls"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/calls"
 )
 
 // API is the subset of the Mattermost plugin API used by the ring service.

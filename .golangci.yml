@@ -61,4 +61,4 @@ formatters:
           replacement: any
     goimports:
       local-prefixes:
-        - github.com/utaku/mattermost-plugin-group-ring
+        - github.com/Krys600/mattermost-plugin-group-ring

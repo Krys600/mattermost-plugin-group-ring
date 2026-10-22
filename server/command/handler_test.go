@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/utaku/mattermost-plugin-group-ring/server/i18n"
-	"github.com/utaku/mattermost-plugin-group-ring/server/ring"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/i18n"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/ring"
 )
 
 type fakeService struct {

@@ -12,7 +12,7 @@
 //     starts and updates with "end_at" when it ends.
 package calls
 
-//go:generate mockgen -destination=mocks/mock_client.go -package=mocks github.com/utaku/mattermost-plugin-group-ring/server/calls Client
+//go:generate mockgen -destination=mocks/mock_client.go -package=mocks github.com/Krys600/mattermost-plugin-group-ring/server/calls Client
 
 import (
 	"encoding/json"

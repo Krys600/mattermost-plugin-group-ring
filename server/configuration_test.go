@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/utaku/mattermost-plugin-group-ring/server/ring"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/ring"
 )
 
 func TestRingConfigDefaultsAndClamping(t *testing.T) {

@@ -10,11 +10,11 @@ import (
 	"github.com/mattermost/mattermost/server/public/pluginapi"
 	"github.com/pkg/errors"
 
-	"github.com/utaku/mattermost-plugin-group-ring/server/calls"
-	"github.com/utaku/mattermost-plugin-group-ring/server/command"
-	"github.com/utaku/mattermost-plugin-group-ring/server/i18n"
-	"github.com/utaku/mattermost-plugin-group-ring/server/kvstore"
-	"github.com/utaku/mattermost-plugin-group-ring/server/ring"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/calls"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/command"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/i18n"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/kvstore"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/ring"
 )
 
 // eventConfigChanged tells webapps to reload the client configuration.

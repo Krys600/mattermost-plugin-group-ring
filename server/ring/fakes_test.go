@@ -9,7 +9,7 @@ import (
 
 	"github.com/mattermost/mattermost/server/public/model"
 
-	"github.com/utaku/mattermost-plugin-group-ring/server/ring"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/ring"
 )
 
 // fakeKV is an in-memory plugin KV store with compare-and-set semantics. Expiry is ignored.

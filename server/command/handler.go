@@ -6,7 +6,7 @@ import (
 
 	"github.com/mattermost/mattermost/server/public/model"
 
-	"github.com/utaku/mattermost-plugin-group-ring/server/ring"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/ring"
 )
 
 // Outcome kinds, also used in the REST API response.

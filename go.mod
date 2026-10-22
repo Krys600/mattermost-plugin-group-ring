@@ -1,4 +1,4 @@
-module github.com/utaku/mattermost-plugin-group-ring
+module github.com/Krys600/mattermost-plugin-group-ring
 
 go 1.26.7
 

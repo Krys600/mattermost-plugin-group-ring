@@ -7,8 +7,8 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/mattermost/mattermost/server/public/model"
 
-	"github.com/utaku/mattermost-plugin-group-ring/server/command"
-	"github.com/utaku/mattermost-plugin-group-ring/server/ring"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/command"
+	"github.com/Krys600/mattermost-plugin-group-ring/server/ring"
 )
 
 // clientConfig is the configuration the webapp needs to render its UI.
